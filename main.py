@@ -967,7 +967,7 @@ current_user=[]
 
 
 
-'''
+
 @app.context_processor
 def inject_global_vars():
     current_user=list_user()[0]
@@ -979,7 +979,7 @@ def inject_global_vars():
     return dict(site_name="Ekogab Blogs", about_me=truncated_text,logged_user=current_user)
 
 
-'''
+
 
 
 @app.route('/createUser',methods=['GET'])
@@ -1004,7 +1004,7 @@ def home_page():
 
     # return render_template('home.html',logged_user=current_user, blog_posts=blogs,blogs=[])
 
-'''
+
 @app.route('/about')
 def about_page():
     return render_template('about.html',logged_user=current_user)
@@ -1023,7 +1023,6 @@ def contact_page():
 def singleblog_page(blog_id):
     return render_template('single.html',blog_id=blog_id)
 
-'''
 
 # Run the Flask app
 # if __name__ == "__main__":
